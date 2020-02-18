@@ -7,7 +7,9 @@
 </head>
 <body>
     <ul>
-        <li>herer</li>
+        <?php foreach($tasks as $task): ?>
+            <li><?= $task->description ?>
+        <?php endforeach ?>
     </ul>
 </body>
 </html>

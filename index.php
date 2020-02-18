@@ -2,6 +2,8 @@
 
 require 'functions.php';
 
-$pdo = connectToDb();
+$query = require 'bootstrap.php';
+
+$tasks = $query->selectAll('todos');
 
 include 'views/index.view.php';
