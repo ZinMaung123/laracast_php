@@ -21,4 +21,23 @@ class QueryBuilder
 
         return $tasks;
     }
+
+    public function insert($table, array $datas)
+    {
+        $sql = sprintf("insert into %s (%s) values (%s)",
+                        $table,
+                        implode(', ', array_keys($datas)),
+                        ':' . implode(', :', array_keys($datas))
+                );
+       
+        try{
+            $statement = $this->pdo->prepare($sql);
+
+            $statement->execute($datas);   
+        }
+        catch(Exception $e){
+            die('400 Bad Request');
+        }
+        return $this->pdo->lastInsertId();
+    }
 }
