@@ -7,12 +7,17 @@ namespace Composer\Autoload;
 class ComposerStaticInitad3fd95931647521bb346f543716eca3
 {
     public static $classMap = array (
-        'Connection' => __DIR__ . '/../..' . '/core/Database/Connection.php',
+        'App\\Controllers\\PageController' => __DIR__ . '/../..' . '/app/controllers/PageController.php',
+        'App\\Core\\App' => __DIR__ . '/../..' . '/app/core/App.php',
+        'App\\Core\\Request' => __DIR__ . '/../..' . '/app/core/Request.php',
+        'App\\Core\\Router' => __DIR__ . '/../..' . '/app/core/Router.php',
+        'App\\Model\\Task' => __DIR__ . '/../..' . '/app/Model/Task.php',
+        'ComposerAutoloaderInitad3fd95931647521bb346f543716eca3' => __DIR__ . '/..' . '/composer/autoload_real.php',
+        'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
+        'Composer\\Autoload\\ComposerStaticInitad3fd95931647521bb346f543716eca3' => __DIR__ . '/..' . '/composer/autoload_static.php',
+        'Connection' => __DIR__ . '/../..' . '/app/core/Database/Connection.php',
         'Post' => __DIR__ . '/../..' . '/array_funcs/array.php',
-        'QueryBuilder' => __DIR__ . '/../..' . '/core/Database/QueryBuilder.php',
-        'Request' => __DIR__ . '/../..' . '/core/Request.php',
-        'Router' => __DIR__ . '/../..' . '/core/Router.php',
-        'Task' => __DIR__ . '/../..' . '/Model/Task.php',
+        'QueryBuilder' => __DIR__ . '/../..' . '/app/core/Database/QueryBuilder.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
