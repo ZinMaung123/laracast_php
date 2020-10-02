@@ -40,4 +40,13 @@ class QueryBuilder
         }
         return $this->pdo->lastInsertId();
     }
+
+    public function selectWithEmail($email){
+        $sql = 'select * from users where email = :email';
+
+        $statement = $this->pdo->prepare($sql);
+        $statement->execute(['email' => $email]);
+        $user = $statement->fetch();
+        return $user;
+    }
 }

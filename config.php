@@ -2,8 +2,8 @@
 
 return [
     "database" => [
-        "db_name" => "mytodo",
-        "username" => "zmm@oway",
+        "db_name" => "small_cms",
+        "username" => "cayf",
         "password" => "123456",
         "connection" => "mysql:host=127.0.0.1",
         "options" => [
